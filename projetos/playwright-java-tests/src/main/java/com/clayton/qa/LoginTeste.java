@@ -1,9 +1,10 @@
 package com.clayton.qa;
 
+import com.clayton.qa.pages.LoginPage;
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
-import com.microsoft.playwright.*;
+import com.microsoft.playwright.Playwright;
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
 public class LoginTeste {
@@ -12,15 +13,10 @@ public class LoginTeste {
             Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
             Page page = browser.newPage();
 
-            // Acessa o site
-            page.navigate("https://www.saucedemo.com");
-
-            // Preenche usuário e senha
-            page.locator("#user-name").fill("standard_user");
-            page.locator("#password").fill("secret_sauce");
-
-            // Clica no botão de login
-            page.locator("#login-button").click();
+            // Usa o Page Object
+            LoginPage loginPage = new LoginPage(page);
+            loginPage.navigate();
+            loginPage.login("standard_user", "secret_sauce");
 
             // ========== ASSERTIONS (Validações) ==========
             assertThat(page).hasURL("https://www.saucedemo.com/inventory.html");

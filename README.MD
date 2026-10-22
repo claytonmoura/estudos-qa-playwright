@@ -58,8 +58,16 @@ Já utilizei a ferramenta profissionalmente na GFT (2022–2024) e agora estou r
 - Validação de elemento visível
 - Entendimento da diferença entre executar ações e validar resultados
 
-### 5. Próximos Aprendizados
-- Page Object Model
+### 5. Page Object Model (POM)
+**Status:** Concluído
+
+- Criação da classe `LoginPage`
+- Separação de seletores e ações da página
+- Reutilização do Page Object no teste
+- Teste de login mais limpo e organizado
+- Entendimento da importância do POM para manutenção
+
+### 6. Próximos Aprendizados
 - Melhor organização dos testes
 - Testes com usuário inválido
 - Testes de API com Playwright
