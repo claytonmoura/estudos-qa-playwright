@@ -66,6 +66,7 @@ Já utilizei a ferramenta profissionalmente na GFT (2022–2024) e agora estou r
 - Reutilização do Page Object no teste
 - Teste de login mais limpo e organizado
 - Entendimento da importância do POM para manutenção
+- Fluxo completo: Login → Adicionar produto → Validar carrinho
 
 ### 6. Próximos Aprendizados
 - Melhor organização dos testes

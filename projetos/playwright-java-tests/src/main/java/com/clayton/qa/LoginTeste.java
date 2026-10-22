@@ -1,11 +1,12 @@
 package com.clayton.qa;
 
+import com.clayton.qa.pages.CartPage;
+import com.clayton.qa.pages.InventoryPage;
 import com.clayton.qa.pages.LoginPage;
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
-import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
 public class LoginTeste {
     public static void main(String[] args) {
@@ -13,19 +14,25 @@ public class LoginTeste {
             Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
             Page page = browser.newPage();
 
-            // Usa o Page Object
+            // 1. Login
             LoginPage loginPage = new LoginPage(page);
             loginPage.navigate();
             loginPage.login("standard_user", "secret_sauce");
 
-            // ========== ASSERTIONS (Validações) ==========
-            assertThat(page).hasURL("https://www.saucedemo.com/inventory.html");
-            assertThat(page.locator(".title")).hasText("Products");
-            assertThat(page.locator(".inventory_list")).isVisible();
+            // 2, Página de produtos
+            InventoryPage inventoryPage = new InventoryPage(page);
+            inventoryPage.validatePage();
+            inventoryPage.addBackpackToCart();
+            inventoryPage.validateProductAddedToCart();
+            inventoryPage.goToCart();
 
-            System.out.println("Login validado com sucesso!");
+            // 3. Carrinho
+            CartPage cartPage = new CartPage(page);
+            cartPage.validatePage();
+            cartPage.validateProductInCart("Sauce Labs Backpack");
 
-            // Espera um pouco para ver o resultado
+            System.out.println("Fluxo completo (Login -> Carrinho) validado com sucesso!");
+
             page.waitForTimeout(3000);
         }
     }
