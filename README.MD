@@ -49,8 +49,16 @@ Já utilizei a ferramenta profissionalmente na GFT (2022–2024) e agora estou r
 - Usuário: `standard_user`
 - Senha: `secret_sauce`
 
-### 4. Próximos Aprendizados
-- Validações (Assertions)
+### 4. Assertions (Validações)
+**Status:** Concluído
+
+- Uso de `assertThat()` do Playwright
+- Validação de URL após o login
+- Validação de texto visível na página
+- Validação de elemento visível
+- Entendimento da diferença entre executar ações e validar resultados
+
+### 5. Próximos Aprendizados
 - Page Object Model
 - Melhor organização dos testes
 - Testes com usuário inválido
