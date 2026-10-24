@@ -68,8 +68,16 @@ Já utilizei a ferramenta profissionalmente na GFT (2022–2024) e agora estou r
 - Entendimento da importância do POM para manutenção
 - Fluxo completo: Login → Adicionar produto → Validar carrinho
 
-### 6. Próximos Aprendizados
-- Melhor organização dos testes
+### 6. Organização do Projeto + JUnit
+**Status:** Concluído
+
+- Separação das pastas `pages` e `tests`
+- Migração dos testes de `main` para JUnit 5
+- Uso das anotações `@Test`, `@BeforeAll`, `@AfterAll`, `@BeforeEach`, `@AfterEach`
+- Execução dos testes via `mvn test`
+- Entendimento do papel do JUnit na automação e futura integração com CI/CD
+
+### 7. Próximos Aprendizados
 - Testes com usuário inválido
 - Testes de API com Playwright
 
