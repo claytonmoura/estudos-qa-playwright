@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.clayton.qa.tests.ApiTest" time="11.537" tests="6" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="25"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\ACER\Documents\estudos-qa-playwright\projetos\playwright-java-tests\target\test-classes;C:\Users\ACER\Documents\estudos-qa-playwright\projetos\playwright-java-tests\target\classes;C:\Users\ACER\.m2\repository\com\microsoft\playwright\playwright\1.49.0\playwright-1.49.0.jar;C:\Users\ACER\.m2\repository\com\google\code\gson\gson\2.11.0\gson-2.11.0.jar;C:\Users\ACER\.m2\repository\com\google\errorprone\error_prone_annotations\2.27.0\error_prone_annotations-2.27.0.jar;C:\Users\ACER\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\ACER\.m2\repository\com\microsoft\playwright\driver\1.49.0\driver-1.49.0.jar;C:\Users\ACER\.m2\repository\com\microsoft\playwright\driver-bundle\1.49.0\driver-bundle-1.49.0.jar;C:\Users\ACER\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\ACER\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\ACER\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\ACER\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ACER\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\ACER\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\ACER\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="25"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-25.0.4.101-hotspot\bin"/>
+    <property name="sun.java.command" value="C:\Users\ACER\AppData\Local\Temp\surefire8351933284899730194\surefirebooter-20261024154239349_3.jar C:\Users\ACER\AppData\Local\Temp\surefire8351933284899730194 2026-10-24T15-42-38_915-jvmRun1 surefire-20261024154239349_1tmp surefire_0-20261024154239349_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="com.clayton.qa.tests.ApiTest"/>
+    <property name="surefire.test.class.path" value="C:\Users\ACER\Documents\estudos-qa-playwright\projetos\playwright-java-tests\target\test-classes;C:\Users\ACER\Documents\estudos-qa-playwright\projetos\playwright-java-tests\target\classes;C:\Users\ACER\.m2\repository\com\microsoft\playwright\playwright\1.49.0\playwright-1.49.0.jar;C:\Users\ACER\.m2\repository\com\google\code\gson\gson\2.11.0\gson-2.11.0.jar;C:\Users\ACER\.m2\repository\com\google\errorprone\error_prone_annotations\2.27.0\error_prone_annotations-2.27.0.jar;C:\Users\ACER\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\ACER\.m2\repository\com\microsoft\playwright\driver\1.49.0\driver-1.49.0.jar;C:\Users\ACER\.m2\repository\com\microsoft\playwright\driver-bundle\1.49.0\driver-bundle-1.49.0.jar;C:\Users\ACER\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\ACER\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\ACER\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\ACER\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ACER\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\ACER\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\ACER\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\ACER"/>
+    <property name="user.language" value="pt"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-08-18"/>
+    <property name="java.home" value="C:\Program Files\Eclipse Adoptium\jdk-25.0.4.101-hotspot"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\ACER\Documents\estudos-qa-playwright\projetos\playwright-java-tests"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\ACER\AppData\Local\Temp\surefire8351933284899730194\surefirebooter-20261024154239349_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="25.0.4.1+1-LTS"/>
+    <property name="user.name" value="ACER"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-25.0.4.1+1"/>
+    <property name="maven.ext.class.path" value="C:\Users\ACER\.vscode\extensions\oracle.oracle-java-27.0.0\nbcode\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="localRepository" value="C:\Users\ACER\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\ACER\AppData\Local\Temp\"/>
+    <property name="java.version" value="25.0.4.1"/>
+    <property name="user.dir" value="C:\Users\ACER\Documents\estudos-qa-playwright\projetos\playwright-java-tests"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-25.0.4.101-hotspot\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Eclipse Adoptium\jdk-25.0.4.101-hotspot\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\ACER\AppData\Local\Microsoft\WindowsApps;C:\adb;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Users\ACER\AppData\Local\Microsoft\WindowsApps;C:\Users\ACER\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ACER\AppData\Roaming\npm;C:\Program Files (x86)\Apache\maven\apache-maven-3.10.0\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="25.0.4.1+1-LTS"/>
+    <property name="stdin.encoding" value="Cp1252"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="69.0"/>
+  </properties>
+  <testcase name="deveCriarUsuarioComSucesso" classname="com.clayton.qa.tests.ApiTest" time="0.387">
+    <system-out><![CDATA[Status: 201
+Body: {"name":"Clayton","job":"QA","id":"464","createdAt":"2026-10-24T18:42:49.977Z","support":{"url":"https://reqres.in/go/posthog","text":"PostHog ingests and stores your analytics, errors, replays, and business data so you and your agents can query and act on it. Get started.","sponsored_by":"PostHog"},"_meta":{"powered_by":"ReqRes","docs_url":"https://app.reqres.in/documentation","upgrade_url":"https://app.reqres.in/upgrade","example_url":"https://app.reqres.in/examples/notes-app","variant":"key_v1","message":"You are on the shared demo (no personal key), which has a low daily limit. A free account gives you your own key with 250 requests a day, plus request logs and your own collections.","cta":{"label":"Get a free key","url":"https://app.reqres.in/?utm_source=reqres_api&utm_medium=json&utm_campaign=demo_meta_key"},"context":"keyless_success"}}
+]]></system-out>
+  </testcase>
+  <testcase name="deveAtualizarUsuarioComSucesso" classname="com.clayton.qa.tests.ApiTest" time="0.237">
+    <system-out><![CDATA[Status: 200
+Body: {"name":"Clayton","job":"QA Automation","updatedAt":"2026-10-24T18:42:50.236Z","support":{"url":"https://reqres.in/go/posthog","text":"PostHog ingests and stores your analytics, errors, replays, and business data so you and your agents can query and act on it. Get started.","sponsored_by":"PostHog"},"_meta":{"powered_by":"ReqRes","docs_url":"https://app.reqres.in/documentation","upgrade_url":"https://app.reqres.in/upgrade","example_url":"https://app.reqres.in/examples/notes-app","variant":"key_v1","message":"You are on the shared demo (no personal key), which has a low daily limit. A free account gives you your own key with 250 requests a day, plus request logs and your own collections.","cta":{"label":"Get a free key","url":"https://app.reqres.in/?utm_source=reqres_api&utm_medium=json&utm_campaign=demo_meta_key"},"context":"keyless_success"}}
+]]></system-out>
+  </testcase>
+  <testcase name="deveBuscarUsuarioPorId" classname="com.clayton.qa.tests.ApiTest" time="0.213">
+    <system-out><![CDATA[Status: 200
+Body: {"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},"support":{"url":"https://reqres.in/go/posthog","text":"PostHog ingests and stores your analytics, errors, replays, and business data so you and your agents can query and act on it. Get started.","sponsored_by":"PostHog"},"_meta":{"powered_by":"ReqRes","docs_url":"https://app.reqres.in/documentation","upgrade_url":"https://app.reqres.in/upgrade","example_url":"https://app.reqres.in/examples/notes-app","variant":"key_v1","message":"You are on the shared demo (no personal key), which has a low daily limit. A free account gives you your own key with 250 requests a day, plus request logs and your own collections.","cta":{"label":"Get a free key","url":"https://app.reqres.in/?utm_source=reqres_api&utm_medium=json&utm_campaign=demo_meta_key"},"context":"keyless_success"}}
+]]></system-out>
+  </testcase>
+  <testcase name="deveListarUsuariosComSucesso" classname="com.clayton.qa.tests.ApiTest" time="0.219">
+    <system-out><![CDATA[Status: 200
+Body: {"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://reqres.in/img/faces/7-image.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://reqres.in/img/faces/8-image.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://reqres.in/img/faces/9-image.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://reqres.in/img/faces/10-image.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://reqres.in/img/faces/11-image.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"}],"support":{"url":"https://reqres.in/go/posthog","text":"PostHog ingests and stores your analytics, errors, replays, and business data so you and your agents can query and act on it. Get started.","sponsored_by":"PostHog"},"_meta":{"powered_by":"ReqRes","docs_url":"https://app.reqres.in/documentation","upgrade_url":"https://app.reqres.in/upgrade","example_url":"https://app.reqres.in/examples/notes-app","variant":"key_v1","message":"You are on the shared demo (no personal key), which has a low daily limit. A free account gives you your own key with 250 requests a day, plus request logs and your own collections.","cta":{"label":"Get a free key","url":"https://app.reqres.in/?utm_source=reqres_api&utm_medium=json&utm_campaign=demo_meta_key"},"context":"keyless_success"}}
+]]></system-out>
+  </testcase>
+  <testcase name="deveRetornarErroQuandoUsuarioNaoExistir" classname="com.clayton.qa.tests.ApiTest" time="0.211">
+    <system-out><![CDATA[Status: 404
+]]></system-out>
+  </testcase>
+  <testcase name="deveDeletarUsuarioComSucesso" classname="com.clayton.qa.tests.ApiTest" time="0.209">
+    <system-out><![CDATA[Status: 204
+]]></system-out>
+  </testcase>
+</testsuite>

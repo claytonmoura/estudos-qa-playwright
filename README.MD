@@ -94,8 +94,13 @@ Já utilizei a ferramenta profissionalmente na GFT (2022–2024) e agora estou r
 - Uso de constantes para usuários, senhas, produtos e mensagens de erro
 - Melhoria na legibilidade e manutenção do código
 
-### 9. Próximos Aprendizados
-- Testes de API com Playwright
+### 9. Testes de API com Playwright
+**Status:** Concluído
+
+- Uso do `APIRequestContext` do Playwright
+- Testes de GET, POST, PUT e DELETE
+- Validação de status code e corpo da resposta
+- 6 testes de API passando com a API ReqRes
 
 ---
 
