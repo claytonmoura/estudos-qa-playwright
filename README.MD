@@ -77,8 +77,16 @@ Já utilizei a ferramenta profissionalmente na GFT (2022–2024) e agora estou r
 - Execução dos testes via `mvn test`
 - Entendimento do papel do JUnit na automação e futura integração com CI/CD
 
-### 7. Próximos Aprendizados
-- Testes com usuário inválido
+### 7. Testes Negativos
+**Status:** Concluído
+
+- Login com usuário inválido
+- Login com senha inválida
+- Login com campos vazios
+- Validação de mensagens de erro
+- Suite com 4 testes passando (1 positivo + 3 negativos)
+
+### 8. Próximos Aprendizados
 - Testes de API com Playwright
 
 ---

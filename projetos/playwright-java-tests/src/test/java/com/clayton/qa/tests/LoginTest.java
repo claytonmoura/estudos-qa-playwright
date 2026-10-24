@@ -1,10 +1,19 @@
 package com.clayton.qa.tests;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 import com.clayton.qa.pages.CartPage;
 import com.clayton.qa.pages.InventoryPage;
 import com.clayton.qa.pages.LoginPage;
-import com.microsoft.playwright.*;
-import org.junit.jupiter.api.*;
+import com.microsoft.playwright.Browser;
+import com.microsoft.playwright.BrowserContext;
+import com.microsoft.playwright.BrowserType;
+import com.microsoft.playwright.Page;
+import com.microsoft.playwright.Playwright;
 
 public class LoginTest {
     static Playwright playwright;
@@ -50,5 +59,29 @@ public class LoginTest {
         CartPage cartPage = new CartPage(page);
         cartPage.validatePage();
         cartPage.validateProductInCart("Sauce Labs Backpack");
+    }
+
+    @Test
+    void deveExibirErroQuandoUsuarioForInvalido() {
+    LoginPage loginPage = new LoginPage(page);
+    loginPage.navigate();
+    loginPage.login("usuario_invalido", "secret_sauce");
+    loginPage.validateErrorMessage("Epic sadface: Username and password do not match any user in this service");
+    }
+
+    @Test
+    void deveExibirErroQuandoSenhaForInvalida() {
+    LoginPage loginPage = new LoginPage(page);
+    loginPage.navigate();
+    loginPage.login("standard_user", "senha_errada");
+    loginPage.validateErrorMessage("Epic sadface: Username and password do not match any user in this service");
+    }
+
+    @Test
+    void deveExibirErroQuandoCamposEstiveremVazios() {
+    LoginPage loginPage = new LoginPage(page);
+    loginPage.navigate();
+    loginPage.login("", "");
+    loginPage.validateErrorMessage("Epic sadface: Username is required");
     }
 }

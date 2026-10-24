@@ -1,6 +1,7 @@
 package com.clayton.qa.pages;
 
 import com.microsoft.playwright.Page;
+import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
 public class LoginPage {
     private final Page page;
@@ -22,5 +23,9 @@ public class LoginPage {
         page.locator(usernameInput).fill(username);
         page.locator(passwordInput).fill(password);
         page.locator(loginButton).click();
+    }
+
+    public void validateErrorMessage(String expectedMessage) {
+    assertThat(page.locator("[data-test='error']")).hasText(expectedMessage);
     }
 }
