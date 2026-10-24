@@ -6,7 +6,9 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import com.clayton.qa.data.TestData;
 import com.clayton.qa.pages.CartPage;
+import com.clayton.qa.pages.CheckoutPage;
 import com.clayton.qa.pages.InventoryPage;
 import com.clayton.qa.pages.LoginPage;
 import com.microsoft.playwright.Browser;
@@ -16,6 +18,7 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 
 public class LoginTest {
+
     static Playwright playwright;
     static Browser browser;
     BrowserContext context;
@@ -48,7 +51,7 @@ public class LoginTest {
     void deveRealizarLoginEAdicionarProdutoNoCarrinho() {
         LoginPage loginPage = new LoginPage(page);
         loginPage.navigate();
-        loginPage.login("standard_user", "secret_sauce");
+        loginPage.login(TestData.USER_VALID, TestData.PASSWORD_VALID);
 
         InventoryPage inventoryPage = new InventoryPage(page);
         inventoryPage.validatePage();
@@ -58,30 +61,55 @@ public class LoginTest {
 
         CartPage cartPage = new CartPage(page);
         cartPage.validatePage();
-        cartPage.validateProductInCart("Sauce Labs Backpack");
+        cartPage.validateProductInCart(TestData.PRODUCT_BACKPACK);
     }
 
     @Test
     void deveExibirErroQuandoUsuarioForInvalido() {
-    LoginPage loginPage = new LoginPage(page);
-    loginPage.navigate();
-    loginPage.login("usuario_invalido", "secret_sauce");
-    loginPage.validateErrorMessage("Epic sadface: Username and password do not match any user in this service");
+        LoginPage loginPage = new LoginPage(page);
+        loginPage.navigate();
+        loginPage.login(TestData.USER_INVALID, TestData.PASSWORD_VALID);
+        loginPage.validateErrorMessage(TestData.ERROR_INVALID_CREDENTIALS);
     }
 
     @Test
     void deveExibirErroQuandoSenhaForInvalida() {
-    LoginPage loginPage = new LoginPage(page);
-    loginPage.navigate();
-    loginPage.login("standard_user", "senha_errada");
-    loginPage.validateErrorMessage("Epic sadface: Username and password do not match any user in this service");
+        LoginPage loginPage = new LoginPage(page);
+        loginPage.navigate();
+        loginPage.login(TestData.USER_VALID, TestData.PASSWORD_INVALID);
+        loginPage.validateErrorMessage(TestData.ERROR_INVALID_CREDENTIALS);
     }
 
     @Test
     void deveExibirErroQuandoCamposEstiveremVazios() {
-    LoginPage loginPage = new LoginPage(page);
-    loginPage.navigate();
-    loginPage.login("", "");
-    loginPage.validateErrorMessage("Epic sadface: Username is required");
+        LoginPage loginPage = new LoginPage(page);
+        loginPage.navigate();
+        loginPage.login("", "");
+        loginPage.validateErrorMessage(TestData.ERROR_USERNAME_REQUIRED);
+    }
+
+    @Test
+    void deveFinalizarCompraComSucesso() {
+        // Login
+        LoginPage loginPage = new LoginPage(page);
+        loginPage.navigate();
+        loginPage.login(TestData.USER_VALID, TestData.PASSWORD_VALID);
+
+        // Produtos
+        InventoryPage inventoryPage = new InventoryPage(page);
+        inventoryPage.validatePage();
+        inventoryPage.addBackpackToCart();
+        inventoryPage.goToCart();
+
+        // Carrinho
+        CartPage cartPage = new CartPage(page);
+        cartPage.validatePage();
+        cartPage.proceedToCheckout();
+
+        // Checkout
+        CheckoutPage checkoutPage = new CheckoutPage(page);
+        checkoutPage.fillCustomerInfo(TestData.FIRST_NAME, TestData.LAST_NAME, TestData.POSTAL_CODE);
+        checkoutPage.finishOrder();
+        checkoutPage.validateOrderCompleted();
     }
 }

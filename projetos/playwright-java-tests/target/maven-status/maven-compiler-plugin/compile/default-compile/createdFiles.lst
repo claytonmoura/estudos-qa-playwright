@@ -1,5 +1,5 @@
-com\clayton\qa\pages\CartPage.class
 com\clayton\qa\pages\InventoryPage.class
 com\clayton\qa\PrimeiroTeste.class
-com\clayton\qa\pages\LoginPage.class
 com\clayton\qa\LoginTeste.class
+com\clayton\qa\pages\CartPage.class
+com\clayton\qa\pages\LoginPage.class

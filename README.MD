@@ -86,7 +86,15 @@ Já utilizei a ferramenta profissionalmente na GFT (2022–2024) e agora estou r
 - Validação de mensagens de erro
 - Suite com 4 testes passando (1 positivo + 3 negativos)
 
-### 8. Próximos Aprendizados
+### 8. Massa de Dados (TestData)
+**Status:** Concluído
+
+- Criação da classe `TestData` para centralizar dados de teste
+- Remoção de valores hardcoded dos testes
+- Uso de constantes para usuários, senhas, produtos e mensagens de erro
+- Melhoria na legibilidade e manutenção do código
+
+### 9. Próximos Aprendizados
 - Testes de API com Playwright
 
 ---
