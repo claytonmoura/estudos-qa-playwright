@@ -102,6 +102,13 @@ Já utilizei a ferramenta profissionalmente na GFT (2022–2024) e agora estou r
 - Validação de status code e corpo da resposta
 - 6 testes de API passando com a API ReqRes
 
+### 10. CI/CD com GitHub Actions
+**Status:** Concluído
+
+- Configuração de pipeline para rodar testes automaticamente no push
+- Execução em modo headless no CI
+- 11 testes passando (Web + API) no GitHub Actions
+
 ---
 
 ## Projetos
