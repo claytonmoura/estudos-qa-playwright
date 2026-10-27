@@ -21,10 +21,13 @@ jobs:
           java-version: '21'
 
       - name: Instalar dependências Maven
+        working-directory: projetos/playwright-java-tests
         run: mvn dependency:resolve
 
       - name: Instalar navegadores do Playwright
+        working-directory: projetos/playwright-java-tests
         run: mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
 
       - name: Rodar testes
+        working-directory: projetos/playwright-java-tests
         run: mvn test
